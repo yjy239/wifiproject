@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <yidu.cooking.widget.widget.PagerScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="20sp"
+                    android:text="Cook"/>
+
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+            </RelativeLayout>
+
+            <cn.bingoogolapple.bgabanner.BGABanner
+                android:id="@+id/banner_main_flip"
+                style="@style/BannerDefaultStyle"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                app:banner_indicatorGravity="bottom|center_horizontal"
+                app:banner_pointDrawable="@drawable/bga_banner_selector_point_solid1"
+                app:banner_transitionEffect="defaultEffect" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/team_bottom_tab"
+                    style="@style/ll_home_tab"
+                    android:layout_height="37dp"
+                    android:background="@color/white"
+                    android:layout_width="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_icon1"
+                        style="@style/fragment_tab_rl">
+
+                        <TextView
+                            android:id="@+id/tvicon1"
+                            style="@style/fragment_tab_tv_home"
+                            android:text="Online recipes" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_icon2"
+                        style="@style/fragment_tab_rl">
+
+                        <TextView
+                            android:id="@+id/tv_icon2"
+                            style="@style/fragment_tab_tv_home1"
+                            android:text="Edit recipes" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_icon3"
+                        style="@style/fragment_tab_rl">
+
+                        <TextView
+                            android:id="@+id/tv_icon3"
+                            style="@style/fragment_tab_tv_home1"
+                            android:text="My cooking" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/team_cursor"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/white"
+                        android:scaleType="matrix"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <yidu.cooking.widget.widget.AutoHeightViewPager
+                android:id="@+id/pager"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+
+        </LinearLayout>
+
+
+    </yidu.cooking.widget.widget.PagerScrollView>
+
+
+
+
+
+
+</LinearLayout>
